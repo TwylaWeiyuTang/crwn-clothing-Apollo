@@ -22,7 +22,7 @@ const CollectionsOverviewContainer = () => {
 
     const {loading, error, data} = useQuery(GET_COLLECTIONS)
     if (loading) return <Spinner />
-    if (error) console.log({error})
+    if (error) console.log(error)
     if(data) return <CollectionsOverview collections={data.collections} />
 }
 

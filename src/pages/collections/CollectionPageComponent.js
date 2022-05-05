@@ -6,10 +6,8 @@ import { selectCollection } from '../../redux/shop/shopSelectors'
 import './collectionPageStyle.scss'
 
 
-const CollectionComponent = () => {
-  const { collectionId } = useParams()
-  const collection = useSelector((state) => selectCollection(collectionId)(state))
-  // this is like mapStateToProps
+const CollectionComponent = ({collection}) => {
+  
   const {title, items} = collection
 
   return (
