@@ -19,23 +19,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-client.query({
-  query: gql`
-    {
-      getCollectionsByTitle(title: "hats"){
-        title
-        id
-        items{
-          id
-          name
-          price
-          imageUrl
-        }
-      }
-    }
-  `
-}).then(res => console.log(res))
-
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Provider store={store}>

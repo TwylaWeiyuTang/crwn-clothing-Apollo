@@ -13,6 +13,7 @@ import { onSnapshot } from "firebase/firestore";
 import {setCurrentUser} from './redux/user/userActions'
 import { selectCurrentUser } from './redux/user/userSelectors';
 import React from 'react';
+import HeaderContainer from './components/header/HeaderContainer';
 
 class App extends React.Component {
 
@@ -46,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <HeaderComponent />
+        <HeaderContainer />
         <Routes>
           <Route exact path='/' element = {<HomepageComponent />} />
           <Route path='/shop/*' element = {<ShopComponent />} />
